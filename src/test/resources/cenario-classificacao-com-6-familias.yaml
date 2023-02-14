@@ -1,0 +1,50 @@
+familias:
+- id: 'FAMILIA1'
+  pretendente: { nome: 'Frank Santos', cpf: '65651227334' }
+  conjugue: { nome: 'Otamiris Vale', cpf: '21358626300' }
+  renda: 1400
+  dependentes:
+    - { nome: 'Nicolas Caldas', dataNascimento: '2017-06-21' }
+    - { nome: 'Lucas Caldas', dataNascimento: '2019-12-23' }
+    - { nome: 'Alef Caldas', dataNascimento: '2022-04-04' }
+    - { nome: 'Antony Caldas', dataNascimento: '2022-04-04' }
+
+- id: 'FAMILIA2'
+  pretendente: { nome: 'Raimuno Nonato', cpf: '99345325900' }
+  conjugue: { nome: 'Raquel', cpf: '12345678900' }
+  renda: 2100
+  dependentes:
+    - { nome: 'Davi Lucas', dataNascimento: '2004-02-10' }
+    - { nome: 'Gabriel', dataNascimento: '2009-07-15' }
+    - { nome: 'João Miguel', dataNascimento: '2017-03-05' }
+
+- id: 'FAMILIA3'
+  pretendente: { nome: 'Ricardo' }
+  conjugue: { nome: 'Damaris' }
+  renda: 900
+  dependentes: []
+
+- id: 'FAMILIA4'
+  pretendente: { nome: 'Gleyson Sampaio', cpf: '12345678910' }
+  conjugue: { nome: 'Raiane', cpf: '23586542312' }
+  renda: 950
+  dependentes: []
+
+- id: 'FAMILIA5'
+  pretendente: { nome: 'Vanice' }
+  renda: 400
+  dependentes:
+    - { nome: 'Ana Julia', dataNascimento: '2012-06-18' }
+
+- id: 'FAMILIA6'
+  pretendente: { nome: 'Alvaro' }
+  renda: 3000
+  dependentes: []
+
+resultado:
+  - { posicao: 1, pontuacao: { familia: { id: 'FAMILIA5' }, pontos: 7, pontosPorCriterio: { RENDA_FAMILIAR: 5, QTD_DEPENDENTES: 2 } } }
+  - { posicao: 2, pontuacao: { familia: { id: 'FAMILIA1' }, pontos: 6, pontosPorCriterio: { RENDA_FAMILIAR: 3, QTD_DEPENDENTES: 3 } } }
+  - { posicao: 3, pontuacao: { familia: { id: 'FAMILIA3' }, pontos: 5, pontosPorCriterio: { RENDA_FAMILIAR: 5, QTD_DEPENDENTES: 0 } } }
+  - { posicao: 4, pontuacao: { familia: { id: 'FAMILIA4' }, pontos: 3, pontosPorCriterio: { RENDA_FAMILIAR: 3, QTD_DEPENDENTES: 0 } } }
+  - { posicao: 5, pontuacao: { familia: { id: 'FAMILIA2' }, pontos: 2, pontosPorCriterio: { RENDA_FAMILIAR: 0, QTD_DEPENDENTES: 2 } } }
+  - { posicao: 6, pontuacao: { familia: { id: 'FAMILIA6' }, pontos: 0, pontosPorCriterio: { RENDA_FAMILIAR: 0, QTD_DEPENDENTES: 0 } } }

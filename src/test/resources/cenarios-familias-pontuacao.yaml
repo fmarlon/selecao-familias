@@ -1,0 +1,68 @@
+- descricao: 'Familia com renda de R$ 1000 e com 4 dependentes com menos de 18 anos, deve ter pontuacao 6 (3 de renda e 3 de qtd de dependentes)'
+  familia:
+    id: 'FAMILIA1'
+    pretendente: { cpf: '65651227334', nome: 'Frank Santos', dataNascimento: '1984-09-20' }
+    renda: 1000.00
+    dependentes: 
+    - { nome: 'Nicolas', dataNascimento: '2017-06-21' }
+    - { nome: 'Lucas', dataNascimento: '2019-12-23' }
+    - { nome: 'Alef', dataNascimento: '2022-04-04' }
+    - { nome: 'Antony', dataNascimento: '2022-04-04' }
+  pontuacao:
+    familia: { id: 'FAMILIA1' }
+    pontos: 6
+    pontosPorCriterio: { RENDA_FAMILIAR: 3, QTD_DEPENDENTES: 3 }
+
+- descricao: 'Familia com renda de R$ 1.501,00 e com 1 dependente menor de 18 anos, deve ter pontuacao 2 (0 de renda e 2 de qtd de dependentes)'
+  familia:
+    id: 'FAMILIA2'
+    pretendente: { cpf: '65651227334', nome: 'Pretendente', dataNascimento: '1984-09-20' }
+    conjugue: { cpf: '12345678900', nome: 'Conjugue', dataNascimento: '1988-02-10' }
+    renda: 1501.00
+    dependentes:
+    - { nome: 'Dependente 1', dataNascimento: '2001-05-15' } # 21 anos
+    - { nome: 'Dependente 2', dataNascimento: '2003-02-10' } # 20 anos
+    - { nome: 'Dependente 3', dataNascimento: '2005-04-05' } # 17 anos
+  pontuacao:
+    familia: { id: 'FAMILIA2' }
+    pontos: 2
+    pontosPorCriterio: { RENDA_FAMILIAR: 0, QTD_DEPENDENTES: 2 }
+
+- descricao: 'Familia com renda de R$ 800,00 e com 3 dependente menor de 18 anos, deve ter pontuacao 8 (5 de renda e 3 de qtd de dependentes)'
+  familia:
+    id: 'FAMILIA3'
+    pretendente: { cpf: '12345678900', nome: 'Pretendente', dataNascimento: '1984-09-20' }
+    conjugue: { cpf: '98765432199', nome: 'Conjugue', dataNascimento: '1988-02-10' }
+    renda: 800.00
+    dependentes:
+    - { nome: 'Dependente 1', dataNascimento: '2011-05-15' }
+    - { nome: 'Dependente 2', dataNascimento: '2013-02-10' }
+    - { nome: 'Dependente 3', dataNascimento: '2010-04-05' }
+  pontuacao:
+    familia: { id: 'FAMILIA3' }
+    pontos: 8
+    pontosPorCriterio: { RENDA_FAMILIAR: 5, QTD_DEPENDENTES: 3}
+
+- descricao: 'Familia sem renda e sem dependentes, deve ter pontuacao 5 (5 de renda e 0 de qtd de dependentes)'
+  familia:
+    id: 'FAMILIA4'
+    pretendente: { cpf: "12345678900", nome: 'Pretendente', dataNascimento: '1984-09-20' }
+    conjugue: { cpf: '98765432199', nome: 'Conjugue', dataNascimento: '1988-02-10' }
+    renda: 0.00
+    dependentes: []
+  pontuacao:
+    familia: { id: 'FAMILIA4' }
+    pontos: 5
+    pontosPorCriterio: { RENDA_FAMILIAR: 5, QTD_DEPENDENTES: 0 }
+
+- descricao: 'Familia com renda alta e sem dependentes, deve ter pontuacao 0 (0 de renda e 0 de qtd de dependentes)'
+  familia:
+    id: 'FAMILIA5'
+    pretendente: { cpf: '12345678900', nome: 'Pretendente', dataNascimento: '1984-09-20' }
+    conjugue: { cpf: '98765432199', nome: 'Conjugue', dataNascimento: '1988-02-10' }
+    renda: 10000.00
+    dependentes: []
+  pontuacao:
+    familia: { id: 'FAMILIA5' }
+    pontos: 0
+    pontosPorCriterio: { RENDA_FAMILIAR: 0, QTD_DEPENDENTES: 0 }
