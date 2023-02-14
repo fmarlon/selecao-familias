@@ -12,7 +12,9 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClassificadorFamilias {
+    
     private CalculadoraPontos calculadoraPontos = new CalculadoraPontos();
+    
     public List<FamiliaClassificacao> classificar(List<Familia> familias) {
         List<FamiliaClassificacao> familiasPontuacao = calcularPontuacao(familias);
 
